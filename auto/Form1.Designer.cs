@@ -30,8 +30,8 @@ namespace auto
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,6 +39,7 @@ namespace auto
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.btn_recherche = new System.Windows.Forms.Button();
             this.btn_inserer = new System.Windows.Forms.Button();
@@ -70,10 +71,13 @@ namespace auto
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_about = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel_menu.SuspendLayout();
             this.panel_insertion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_fichiers)).BeginInit();
@@ -155,15 +159,28 @@ namespace auto
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 700);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1397, 33);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(64, 33);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel_menu
             // 
             this.panel_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(84)))));
+            this.panel_menu.Controls.Add(this.btn_about);
             this.panel_menu.Controls.Add(this.btn_recherche);
             this.panel_menu.Controls.Add(this.btn_inserer);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -235,8 +252,8 @@ namespace auto
             // 
             this.dgv_fichiers.AllowUserToAddRows = false;
             this.dgv_fichiers.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgv_fichiers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgv_fichiers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_fichiers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgv_fichiers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -246,14 +263,14 @@ namespace auto
             this.dgv_fichiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_fichiers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chemins});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_fichiers.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_fichiers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_fichiers.EnableHeadersVisualStyles = false;
             this.dgv_fichiers.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_fichiers.Location = new System.Drawing.Point(6, 43);
@@ -554,6 +571,27 @@ namespace auto
             this.panel3.Size = new System.Drawing.Size(16, 591);
             this.panel3.TabIndex = 8;
             // 
+            // btn_about
+            // 
+            this.btn_about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(136)))), ((int)(((byte)(170)))));
+            this.btn_about.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_about.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(136)))), ((int)(((byte)(170)))));
+            this.btn_about.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(170)))), ((int)(((byte)(206)))));
+            this.btn_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_about.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_about.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_about.Image = ((System.Drawing.Image)(resources.GetObject("btn_about.Image")));
+            this.btn_about.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_about.Location = new System.Drawing.Point(0, 544);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btn_about.Size = new System.Drawing.Size(200, 47);
+            this.btn_about.TabIndex = 2;
+            this.btn_about.Text = "A propos";
+            this.btn_about.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_about.UseVisualStyleBackColor = false;
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +615,8 @@ namespace auto
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel_menu.ResumeLayout(false);
             this.panel_insertion.ResumeLayout(false);
             this.panel_insertion.PerformLayout();
@@ -629,6 +669,8 @@ namespace auto
         private System.Windows.Forms.Label lblnomprenom;
         private System.Windows.Forms.Label lbldecision;
         private System.Windows.Forms.Label lblauto;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btn_about;
     }
 }
 

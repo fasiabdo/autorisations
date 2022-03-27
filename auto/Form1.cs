@@ -42,6 +42,7 @@ namespace auto
         {
             customizeDesing();
             groupBox1.Enabled = false;
+            dgv_fichiers.Enabled = false;
         }
 
         private void btn_recherche_Click(object sender, EventArgs e)
@@ -81,12 +82,16 @@ namespace auto
                 }
             }
             groupBox1.Enabled = true;
+            dgv_fichiers.Enabled = true;
         }
 
         private void dgv_fichiers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string fichier = dgv_fichiers.CurrentRow.Cells[0].Value.ToString();
-            axAcroPDF2.LoadFile(fichier);
+            if (dgv_fichiers.Rows.Count > 0)
+            {
+                string fichier = dgv_fichiers.CurrentRow.Cells[0].Value.ToString();
+                axAcroPDF2.LoadFile(fichier);
+            }
         }
 
         private void btn_ajouter_Click(object sender, EventArgs e)
@@ -169,6 +174,19 @@ namespace auto
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btn_about_Click(object sender, EventArgs e)
+        {
+            Form frm = new propos();
+            frm.Show();
+            btn_about.Enabled = false;
+            frm.FormClosing += Frm_FormClosing;
+        }
+
+        private void Frm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            btn_about.Enabled = true;
         }
     }
 }

@@ -58,6 +58,7 @@ namespace auto
             this.cb_recherche_typePermis = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_telecharger = new System.Windows.Forms.Button();
             this.lblnomprenom = new System.Windows.Forms.Label();
             this.lbldecision = new System.Windows.Forms.Label();
             this.lblauto = new System.Windows.Forms.Label();
@@ -78,7 +79,7 @@ namespace auto
             this.tb_Reference = new System.Windows.Forms.TextBox();
             this.tb_NAutorisation = new System.Windows.Forms.TextBox();
             this.tb_NomPrenom = new System.Windows.Forms.TextBox();
-            this.btn_telecharger = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.panelChildForm.SuspendLayout();
             this.panelpdf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF2)).BeginInit();
@@ -297,6 +298,7 @@ namespace auto
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.btn_Filtre);
             this.panel1.Controls.Add(this.btn_recherche);
             this.panel1.Controls.Add(this.tb_recherche_nomOuPrenom);
@@ -334,9 +336,9 @@ namespace auto
             // 
             this.tb_recherche_nomOuPrenom.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tb_recherche_nomOuPrenom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_recherche_nomOuPrenom.Location = new System.Drawing.Point(7, 11);
+            this.tb_recherche_nomOuPrenom.Location = new System.Drawing.Point(144, 11);
             this.tb_recherche_nomOuPrenom.Name = "tb_recherche_nomOuPrenom";
-            this.tb_recherche_nomOuPrenom.Size = new System.Drawing.Size(484, 25);
+            this.tb_recherche_nomOuPrenom.Size = new System.Drawing.Size(347, 25);
             this.tb_recherche_nomOuPrenom.TabIndex = 33;
             // 
             // panel2
@@ -404,6 +406,21 @@ namespace auto
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modification des données";
+            // 
+            // btn_telecharger
+            // 
+            this.btn_telecharger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(136)))), ((int)(((byte)(170)))));
+            this.btn_telecharger.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(150)))), ((int)(((byte)(195)))));
+            this.btn_telecharger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_telecharger.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_telecharger.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_telecharger.Location = new System.Drawing.Point(497, 265);
+            this.btn_telecharger.Name = "btn_telecharger";
+            this.btn_telecharger.Size = new System.Drawing.Size(85, 38);
+            this.btn_telecharger.TabIndex = 36;
+            this.btn_telecharger.Text = "Télécharger";
+            this.btn_telecharger.UseVisualStyleBackColor = false;
+            this.btn_telecharger.Click += new System.EventHandler(this.btn_telecharger_Click);
             // 
             // lblnomprenom
             // 
@@ -620,20 +637,14 @@ namespace auto
             this.tb_NomPrenom.Size = new System.Drawing.Size(324, 25);
             this.tb_NomPrenom.TabIndex = 19;
             // 
-            // btn_telecharger
+            // label10
             // 
-            this.btn_telecharger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(136)))), ((int)(((byte)(170)))));
-            this.btn_telecharger.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(150)))), ((int)(((byte)(195)))));
-            this.btn_telecharger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_telecharger.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_telecharger.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_telecharger.Location = new System.Drawing.Point(497, 265);
-            this.btn_telecharger.Name = "btn_telecharger";
-            this.btn_telecharger.Size = new System.Drawing.Size(85, 38);
-            this.btn_telecharger.TabIndex = 36;
-            this.btn_telecharger.Text = "Télécharger";
-            this.btn_telecharger.UseVisualStyleBackColor = false;
-            this.btn_telecharger.Click += new System.EventHandler(this.btn_telecharger_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(135, 19);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Nom et/ou Prenom :";
             // 
             // recherche
             // 
@@ -714,5 +725,6 @@ namespace auto
         private System.Windows.Forms.Label lbldecision;
         private System.Windows.Forms.Label lblauto;
         private System.Windows.Forms.Button btn_telecharger;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -104,8 +104,11 @@ namespace auto
         {
             try
             {
-                string NDecision = dgv_resultatRecherche.CurrentRow.Cells[0].Value.ToString();
-                afficher_Informations(NDecision);
+                if (dgv_resultatRecherche.Rows.Count > 0)
+                {
+                    string NDecision = dgv_resultatRecherche.CurrentRow.Cells[0].Value.ToString();
+                    afficher_Informations(NDecision);
+                }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
